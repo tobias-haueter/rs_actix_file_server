@@ -1,0 +1,17 @@
+//https://www.youtube.com/watch?v=GAxxn_oGA0Y
+//Actix vs Rocket. Rust Lang Web Framework perf off. Is Actix Web that fast? Is Rocket fast enough?
+
+/*Server Performance Test (pre compiled / compiled)
+curl localhost:8080
+wrk -t8 -c256 -d30s http://127.0.0.1:8080/
+
+precompiled server result:
+--------------------------
+Running 30s test @ http://127.0.0.1:8080/
+  8 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.35ms    3.15ms  93.01ms   93.96%
+    Req/Sec     3.92k   323.74    11.71k    86.33%
+  937281 requests in 30.04s, 116.20MB read
+Requests/sec:  31196.91
+Transfer/sec:      3.87MB
